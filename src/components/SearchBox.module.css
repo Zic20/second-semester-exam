@@ -1,0 +1,20 @@
+.searchBox {
+    margin-top: 2.5rem;
+}
+
+.searchBox input {
+    padding: .5rem;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-right: 1.5rem;
+    transition: border 2s ease-out;
+    font-size: 1rem;
+    color: black;
+}
+
+.searchBox input:focus {
+    outline: none;
+    border-bottom: 2px solid purple;
+}

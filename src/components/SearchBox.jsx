@@ -1,10 +1,11 @@
 import styles from "../components/SearchBox.module.css";
-import Button from "./Button";
-const SearchBox = () => {
+const SearchBox = ({ onValueChange }) => {
+  function onInputChangeHandler(event) {
+    onValueChange(event.target.value.toLowerCase());
+  }
   return (
     <div className={styles.searchBox}>
-      <input type="text" placeholder="Search" />
-      <Button>Search</Button>
+      <input onChange={onInputChangeHandler} type="text" placeholder="Search" />
     </div>
   );
 };

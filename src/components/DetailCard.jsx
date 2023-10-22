@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../components/DetailCard.css";
+import avatarImage from "../assets/zic.jpg";
 const DetailCard = ({ data }) => {
   const {
     name,
@@ -13,7 +14,9 @@ const DetailCard = ({ data }) => {
   return (
     <div className="detailCard">
       <div className="head">
-        <div className="avatar"></div>
+        <div className="avatar">
+          <img src={avatarImage} alt="" />
+        </div>
         <div className="description-box">
           <h1>{name}</h1>
           <h2>

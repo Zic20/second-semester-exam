@@ -52,8 +52,14 @@ const Home = () => {
 };
 
 export async function loader() {
-  const response = await fetch("../src/repos.json");
-  // const response = await fetch("https://api.github.com/users/Zic20/repos");
+  const headers = new Headers();
+  headers.append(
+    "Authorization",
+    `Bearer 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`
+  );
+  const response = await fetch("https://api.github.com/users/Zic20/repos", {
+    headers,
+  });
   if (!response.ok) {
     throw json(
       {

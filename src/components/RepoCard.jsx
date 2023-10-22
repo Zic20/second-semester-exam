@@ -11,7 +11,7 @@ const RepoCard = ({ repoData }) => {
       </div>
       <h3>{name}</h3>
       <div className="highlight"></div>
-      <Button onClick={() => navigate(`detail/${id}`)}>View Details</Button>
+      <Button onClick={() => navigate(`detail/${name}`)}>View Details</Button>
     </div>
   );
 };

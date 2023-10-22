@@ -1,0 +1,26 @@
+.detailCard {
+    width: 60%;
+    margin: auto;
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+.stats {
+    display: flex;
+    gap: 10%;
+    margin-top: 1.5rem;
+    padding: .5rem 2rem;
+}
+
+.languages {
+    margin-top: 1.5rem;
+    padding: .5rem 2rem;
+}
+
+.languages .info {
+    display: flex;
+    margin-top: .5rem;
+    gap: 10%;
+}

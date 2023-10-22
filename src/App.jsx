@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home, { loader as homeLoader } from "./pages/Home";
-import Detail from "./pages/detail";
+import Detail, { loader as detailLoader } from "./pages/Detail";
 import Navbar from "./components/Navbar";
 
 const routes = createBrowserRouter([
@@ -11,7 +11,8 @@ const routes = createBrowserRouter([
     children: [
       { path: "/", loader: homeLoader, element: <Home /> },
       {
-        path: "detail/:id",
+        path: "detail/:name",
+        loader: detailLoader,
         element: <Detail />,
       },
     ],

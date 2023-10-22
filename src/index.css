@@ -4,6 +4,10 @@
   font-weight: 400;
   color-scheme: light dark;
   background: linear-gradient(82deg, rgba(44, 211, 222, 0.07) 20.9%, rgba(172, 74, 74, 0.00) 73.69%), #E9EAF2;
+  background-image: url(../src/assets/Ellipse\ 5.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
   color: black;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

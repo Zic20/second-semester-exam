@@ -14,3 +14,10 @@
     text-align: center;
     box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.192);
 }
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 16rem;
+        margin: auto;
+    }
+}

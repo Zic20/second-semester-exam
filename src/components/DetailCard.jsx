@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../components/DetailCard.css";
 import avatarImage from "../assets/zic.jpg";
+import convertIsoDate from "../modules/module";
 const DetailCard = ({ data }) => {
   const {
     name,
@@ -24,10 +25,9 @@ const DetailCard = ({ data }) => {
               Go to repo on github
             </a>
           </h2>
-          <p>Created On: {date_created}</p>
+          <p>Created On: {convertIsoDate(date_created)}</p>
         </div>
       </div>
-
       <div className="stats">
         <div className="stat">
           <Stat data="Watchers" value={watchers} />
@@ -64,7 +64,6 @@ function LanguagesStats({ languageData }) {
     for (let key in data) {
       result.push({ data: key, value: data[key] });
     }
-    console.log(result);
 
     setLanguageStats(result);
   }, [languageData]);
@@ -74,6 +73,7 @@ function LanguagesStats({ languageData }) {
       <div className="heading">
         <h5>Languages</h5>
       </div>
+
       <div className="info">
         {languageStats.map((row, index) => {
           return <Stat key={index} data={row.data} value={`${row.value}%`} />;

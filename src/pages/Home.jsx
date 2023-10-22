@@ -52,11 +52,7 @@ const Home = () => {
 };
 
 export async function loader() {
-  const headers = new Headers();
-  headers.append("Authorization", `Bearer ${import.meta.env.VITE_SECRET}`);
-  const response = await fetch("https://api.github.com/users/Zic20/repos", {
-    headers,
-  });
+  const response = await fetch("https://api.github.com/users/Zic20/repos");
   if (!response.ok) {
     throw json(
       {
